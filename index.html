@@ -14,6 +14,7 @@
   .header .sub { font-size: 11px; opacity: 0.85; }
   .header .badge { background: #dc2626; display: inline-block; padding: 4px 14px; border-radius: 16px; font-weight: 700; font-size: 11px; margin-top: 8px; animation: pulse 2s infinite; }
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.6} }
+  .updated { font-size: 10px; opacity: 0.7; margin-top: 6px; }
 
   .tabs { display: flex; gap: 4px; margin-bottom: 14px; background: #e2e8f0; border-radius: 8px; padding: 3px; }
   .tab { flex: 1; text-align: center; padding: 7px 4px; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
@@ -24,21 +25,21 @@
   .panel { display: none; }
   .panel.active { display: block; }
 
-  /* Strategy Panel */
   .strategy-card { background: white; border-radius: 10px; padding: 14px; margin-bottom: 10px; border-left: 4px solid; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-  .strategy-card.s1 { border-color: #2563eb; }
-  .strategy-card.s2 { border-color: #7c3aed; }
+  .strategy-card.s1 { border-color: #7c3aed; }
+  .strategy-card.s2 { border-color: #2563eb; }
   .strategy-card.s3 { border-color: #0891b2; }
-  .strategy-card h3 { font-size: 13px; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+  .strategy-card h3 { font-size: 13px; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
   .strategy-card .tag { font-size: 9px; padding: 2px 6px; border-radius: 8px; font-weight: 700; color: white; }
   .tag-prem { background: #2563eb; }
-  .tag-reg { background: #ca8a04; }
+  .tag-primary { background: #16a34a; }
+  .tag-backup { background: #ca8a04; }
   .tag-safe { background: #0891b2; }
+  .tag-done { background: #16a34a; }
   .strategy-card table { width: 100%; font-size: 11px; border-collapse: collapse; margin-top: 6px; }
   .strategy-card td { padding: 3px 0; border-bottom: 1px solid #f1f5f9; }
   .strategy-card td:first-child { font-weight: 600; color: #475569; width: 38%; }
 
-  /* Flow */
   .flow { background: white; border-radius: 10px; padding: 14px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
   .flow h3 { font-size: 13px; margin-bottom: 10px; color: #1e3a5f; }
   .flow-step { padding: 8px 10px; border-radius: 6px; margin: 4px 0; font-size: 11px; }
@@ -47,8 +48,8 @@
   .f-no { background: #fee2e2; border-left: 3px solid #dc2626; margin-left: 16px; }
   .f-action { background: #dbeafe; border-left: 3px solid #2563eb; margin-left: 32px; }
   .f-safety { background: #cffafe; border-left: 3px solid #0891b2; margin-left: 16px; }
+  .f-info { background: #f0fdf4; border-left: 3px solid #16a34a; margin-left: 16px; }
 
-  /* Timeline Panel */
   .tl-item { background: white; border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; border-left: 4px solid; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
   .tl-item.t-lean { border-color: #2563eb; }
   .tl-item.t-emp2 { border-color: #7c3aed; }
@@ -61,7 +62,6 @@
   .tl-desc { font-size: 11px; color: #475569; }
   .tl-badge { display: inline-block; padding: 1px 6px; border-radius: 8px; font-size: 9px; font-weight: 700; color: white; margin-left: 4px; }
 
-  /* Calendar Panel */
   .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; margin-bottom: 14px; }
   .cal-hdr { text-align: center; font-size: 10px; font-weight: 700; color: #64748b; padding: 4px 0; }
   .cal-day { min-height: 58px; background: white; border-radius: 4px; padding: 2px 3px; border: 1px solid #e2e8f0; }
@@ -81,11 +81,24 @@
   .evx { background: #94a3b8; }
   .month-title { font-size: 14px; font-weight: 700; color: #334155; margin-bottom: 6px; }
 
-  /* Alerts Panel */
   .alert-item { background: white; border-radius: 8px; padding: 10px 12px; margin-bottom: 6px; border-left: 4px solid #dc2626; box-shadow: 0 1px 2px rgba(0,0,0,0.04); font-size: 11px; }
   .alert-item strong { color: #dc2626; }
   .alert-item.warn { border-color: #ea580c; }
   .alert-item.warn strong { color: #ea580c; }
+  .alert-item.ok { border-color: #16a34a; }
+  .alert-item.ok strong { color: #16a34a; }
+
+  .risk-box { background: white; border-radius: 10px; padding: 14px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .risk-box h3 { font-size: 13px; margin-bottom: 8px; }
+  .risk-item { padding: 6px 0; border-bottom: 1px solid #f1f5f9; font-size: 11px; }
+  .risk-item:last-child { border: none; }
+
+  .cost-box { background: white; border-radius: 10px; padding: 14px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border-left: 4px solid #ca8a04; }
+  .cost-box h3 { font-size: 13px; margin-bottom: 6px; color: #92400e; }
+  .cost-box table { width: 100%; font-size: 11px; border-collapse: collapse; }
+  .cost-box td { padding: 3px 0; border-bottom: 1px solid #f1f5f9; }
+  .cost-box td:first-child { font-weight: 600; }
+  .cost-box .total { font-weight: 700; color: #dc2626; font-size: 12px; }
 
   .note { background: #fef3c7; border-radius: 8px; padding: 10px; font-size: 10px; color: #92400e; margin-top: 12px; }
 </style>
@@ -94,14 +107,16 @@
 
 <div class="header">
   <h1>H-1B Transfer Calendar</h1>
-  <div class="sub">Leaniar → 2nd Employer → 3rd Employer</div>
-  <div class="badge">H-1B EXPIRES JUNE 9 — RECEIPT NEEDED BEFORE</div>
+  <div class="sub">2nd Employer (PRIMARY) → Leaniar (BACKUP) → 3rd Employer (SAFETY NET)</div>
+  <div class="badge">H-1B EXPIRES JUNE 9 — APPROVAL NEEDED BEFORE</div>
+  <div class="updated">Last updated: Apr 22 — Strategy: BOTH Premium. 2nd Emp = where you work. Leaniar = backup.</div>
 </div>
 
 <div class="tabs">
   <div class="tab active" onclick="showTab('strategy')">Strategy</div>
   <div class="tab" onclick="showTab('timeline')">Timeline</div>
   <div class="tab" onclick="showTab('calendar')">Calendar</div>
+  <div class="tab" onclick="showTab('risks')">Risks</div>
   <div class="tab" onclick="showTab('alerts')">Alerts</div>
 </div>
 
@@ -109,24 +124,28 @@
 <div id="strategy" class="panel active">
 
   <div class="strategy-card s1">
-    <h3>🏢 Leaniar <span class="tag tag-prem">PREMIUM</span></h3>
+    <h3>🏢 2nd Employer <span class="tag tag-primary">PRIMARY — WHERE YOU WORK</span> <span class="tag tag-prem">PREMIUM</span></h3>
     <table>
-      <tr><td>LCA Filing</td><td>Apr 23 (confirmed)</td></tr>
-      <tr><td>LCA Certified</td><td>~May 4–7</td></tr>
-      <tr><td>I-129 + Premium</td><td>May 5–8</td></tr>
-      <tr><td>Decision</td><td>~May 26–29</td></tr>
-      <tr><td>⚠ If LCA 15 days</td><td>Decision ~Jun 4 (tight)</td></tr>
+      <tr><td>LCA Filing</td><td>Apr 29 (confirmed)</td></tr>
+      <tr><td>LCA Certified</td><td>~May 8–13 (7-10 biz days)</td></tr>
+      <tr><td>I-129 + Premium</td><td>Same day as cert (~May 8–13)</td></tr>
+      <tr><td>Premium Decision</td><td>~June 1–5 (15 biz days)</td></tr>
+      <tr><td>Buffer before Jun 9</td><td>4–8 days (tight but OK)</td></tr>
+      <tr><td>Worst case (15-day LCA)</td><td>Cert May 20 → Decision ~Jun 10 (1 day over!)</td></tr>
+      <tr><td>Why Premium</td><td>This is YOUR employer. Need approval, not just receipt.</td></tr>
     </table>
   </div>
 
   <div class="strategy-card s2">
-    <h3>🏢 2nd Employer <span class="tag tag-reg">REGULAR → PREMIUM</span></h3>
+    <h3>🏢 Leaniar <span class="tag tag-backup">BACKUP</span> <span class="tag tag-prem">PREMIUM</span> <span class="tag tag-done">LCA FILED ✓</span></h3>
     <table>
-      <tr><td>LCA Filing</td><td>Apr 27–May 1</td></tr>
-      <tr><td>LCA Certified</td><td>~May 8–15</td></tr>
-      <tr><td>I-129 (Regular)</td><td>May 8–15</td></tr>
-      <tr><td>Receipt</td><td>~May 15–22 (before Jun 9 ✅)</td></tr>
-      <tr><td>Upgrade to Premium</td><td>IF Leaniar fails (~May 29)</td></tr>
+      <tr><td>LCA Filed</td><td>Apr 21 ✅ Done!</td></tr>
+      <tr><td>LCA Certified</td><td>~Apr 30 – May 5</td></tr>
+      <tr><td>I-129 + Premium</td><td>Same day as cert (~Apr 30–May 5)</td></tr>
+      <tr><td>Decision</td><td>~May 21–26 (earliest of all!)</td></tr>
+      <tr><td>Buffer before Jun 9</td><td>14–19 days ✅</td></tr>
+      <tr><td>Worst case (15-day LCA)</td><td>Decision ~Jun 2 (still 7 days buffer)</td></tr>
+      <tr><td>Why Premium</td><td>Early-warning system. Approval 10+ days before 2nd Employer.</td></tr>
     </table>
   </div>
 
@@ -137,76 +156,92 @@
       <tr><td>LCA Certified</td><td>~May 27–30</td></tr>
       <tr><td>I-129 Filed</td><td>May 31 – Jun 6</td></tr>
       <tr><td>Receipt</td><td>Before Jun 9 🛡️</td></tr>
+      <tr><td>Purpose</td><td>Guarantees receipt for H-1B portability</td></tr>
+    </table>
+  </div>
+
+  <div class="cost-box">
+    <h3>💰 Premium Processing Costs</h3>
+    <table>
+      <tr><td>2nd Employer Premium (I-907)</td><td>$2,805</td></tr>
+      <tr><td>Leaniar Premium (I-907)</td><td>$2,805</td></tr>
+      <tr><td>3rd Employer (no premium)</td><td>$0</td></tr>
+      <tr><td class="total">Total Premium Fees</td><td class="total">$5,610</td></tr>
     </table>
   </div>
 
   <div class="flow">
     <h3>🌳 Decision Tree</h3>
-    <div class="flow-step f-if"><strong>May 26–29:</strong> Check Leaniar premium result</div>
-    <div class="flow-step f-yes"><strong>✅ Approved →</strong> Done! Work for Leaniar.</div>
-    <div class="flow-step f-no"><strong>❌ RFE / Denied →</strong></div>
-    <div class="flow-step f-action"><strong>⚡ Same day:</strong> Upgrade 2nd Employer to Premium (file I-907, $2,805)</div>
+    <div class="flow-step f-if"><strong>~May 21–26:</strong> Leaniar premium decision (arrives FIRST)</div>
+    <div class="flow-step f-yes"><strong>✅ Approved →</strong> H-1B status secured as backup! Breathe easy while waiting for 2nd Employer.</div>
+    <div class="flow-step f-no"><strong>❌ RFE / Denied →</strong> 2nd Employer premium already in pipeline. 3rd Employer safety net in place.</div>
+    <div style="height:6px"></div>
+    <div class="flow-step f-if"><strong>~June 1–5:</strong> 2nd Employer premium decision</div>
+    <div class="flow-step f-yes"><strong>✅ Approved →</strong> Work for 2nd Employer (your real job). Withdraw Leaniar if needed.</div>
+    <div class="flow-step f-no"><strong>❌ RFE →</strong> If Leaniar already approved, you have backup H-1B status. Otherwise, portability via receipts.</div>
     <div style="height:6px"></div>
     <div class="flow-step f-if"><strong>May 31–Jun 6:</strong> Regardless of above</div>
     <div class="flow-step f-safety"><strong>🛡️ File 3rd Employer I-129</strong> — receipt before Jun 9 = portability guaranteed</div>
+    <div style="height:6px"></div>
+    <div class="flow-step f-info"><strong>🎯 Goal:</strong> 2nd Employer approval before Jun 9 so you can work there. Leaniar approval = insurance policy.</div>
   </div>
 </div>
 
 <!-- TIMELINE PANEL -->
 <div id="timeline" class="panel">
 
-  <div class="tl-item t-lean">
-    <div class="tl-date">Apr 23 — Confirmed</div>
-    <div class="tl-title">Leaniar: LCA Filed <span class="tl-badge" style="background:#16a34a">CONFIRMED</span></div>
-    <div class="tl-desc">LCA (ETA-9035) filed. Certification expected May 4–7 (7-10 biz days). Prepare I-129 package now.</div>
+  <div class="tl-item t-green">
+    <div class="tl-date">Apr 21 — DONE ✅</div>
+    <div class="tl-title">Leaniar: LCA Filed <span class="tl-badge" style="background:#16a34a">COMPLETED</span></div>
+    <div class="tl-desc">LCA filed early! Certification expected Apr 30 – May 5. This is your BACKUP employer.</div>
   </div>
 
   <div class="tl-item t-emp2">
-    <div class="tl-date">Apr 27 – May 1</div>
-    <div class="tl-title">2nd Employer: File LCA <span class="tl-badge" style="background:#7c3aed">2ND EMP</span></div>
-    <div class="tl-desc">Must file LCA this week. Certification expected May 8–15.</div>
+    <div class="tl-date">Apr 29 — CONFIRMED</div>
+    <div class="tl-title">2nd Employer: File LCA <span class="tl-badge" style="background:#7c3aed">PRIMARY</span></div>
+    <div class="tl-desc">Your PRIMARY employer files LCA. Certification expected May 8–13. Have I-129 + Premium package ready!</div>
   </div>
 
   <div class="tl-item t-lean">
-    <div class="tl-date">May 4–8</div>
-    <div class="tl-title">Leaniar: LCA Cert → File I-129 + Premium <span class="tl-badge" style="background:#2563eb">LEANIAR</span></div>
-    <div class="tl-desc">Same day as cert: file I-129 + I-907 via overnight. Premium clock starts. Decision ~May 26-29.</div>
+    <div class="tl-date">Apr 30 – May 5</div>
+    <div class="tl-title">Leaniar: LCA Cert → File I-129 + Premium SAME DAY <span class="tl-badge" style="background:#2563eb">BACKUP</span></div>
+    <div class="tl-desc">File I-129 + I-907 immediately when LCA certifies. This gives earliest possible decision (~May 21-26).</div>
   </div>
 
   <div class="tl-item t-emp2">
-    <div class="tl-date">May 8–15</div>
-    <div class="tl-title">2nd Employer: LCA Cert → File I-129 Regular <span class="tl-badge" style="background:#7c3aed">2ND EMP</span></div>
-    <div class="tl-desc">File I-129 with regular processing. No premium yet — save as fallback. Get receipt (I-797C).</div>
+    <div class="tl-date">May 8–13</div>
+    <div class="tl-title">2nd Employer: LCA Cert → File I-129 + Premium SAME DAY <span class="tl-badge" style="background:#7c3aed">PRIMARY</span></div>
+    <div class="tl-desc">File I-129 + I-907 PREMIUM immediately. This is the big one — your real employer. Decision ~June 1-5.</div>
   </div>
 
   <div class="tl-item t-emp3">
     <div class="tl-date">May 15–19</div>
-    <div class="tl-title">3rd Employer: File LCA <span class="tl-badge" style="background:#0891b2">3RD EMP</span></div>
-    <div class="tl-desc">Must certify by ~May 29 so I-129 can be filed May 31–Jun 6.</div>
-  </div>
-
-  <div class="tl-item t-green">
-    <div class="tl-date">May 18–22</div>
-    <div class="tl-title">2nd Employer: Receipt In Hand ✅</div>
-    <div class="tl-desc">Portability backup secured. You have at least one receipt before Jun 9.</div>
+    <div class="tl-title">3rd Employer: File LCA <span class="tl-badge" style="background:#0891b2">SAFETY NET</span></div>
+    <div class="tl-desc">Must certify by ~May 29 for I-129 filing May 31–Jun 6.</div>
   </div>
 
   <div class="tl-item t-orange">
-    <div class="tl-date">May 26–29 — DECISION POINT ⚡</div>
-    <div class="tl-title">Leaniar Premium Decision</div>
-    <div class="tl-desc">✅ Approved → done! ❌ RFE/Denied → immediately upgrade 2nd Employer to premium (I-907).</div>
+    <div class="tl-date">May 21–26 — FIRST DECISION POINT ⚡</div>
+    <div class="tl-title">Leaniar Premium Decision (BACKUP)</div>
+    <div class="tl-desc">✅ Approved → backup H-1B status secured! ❌ RFE/Denied → no panic, 2nd Employer premium still pending + 3rd Employer safety net.</div>
   </div>
 
   <div class="tl-item t-emp3">
     <div class="tl-date">May 31 – Jun 6</div>
     <div class="tl-title">3rd Employer: File I-129 — Safety Net 🛡️</div>
-    <div class="tl-desc">File regardless of other outcomes. Receipt before Jun 9 = guaranteed portability.</div>
+    <div class="tl-desc">File regardless. Receipt before Jun 9 = guaranteed portability.</div>
+  </div>
+
+  <div class="tl-item t-emp2">
+    <div class="tl-date">June 1–5 — MAIN DECISION POINT ⚡</div>
+    <div class="tl-title">2nd Employer Premium Decision (PRIMARY) <span class="tl-badge" style="background:#7c3aed">THE GOAL</span></div>
+    <div class="tl-desc">✅ Approved → Done! Work for 2nd Employer with approved H-1B. ❌ RFE → Use Leaniar approval or portability receipts.</div>
   </div>
 
   <div class="tl-item t-red">
     <div class="tl-date">🚨 June 9 — H-1B EXPIRES</div>
-    <div class="tl-title">Work Under Portability or Approval</div>
-    <div class="tl-desc">Must have at least one receipt (I-797C) or approval (I-797A) in hand. With 3 employers filing, you're covered.</div>
+    <div class="tl-title">Work Under Approval or Portability</div>
+    <div class="tl-desc">Goal: 2nd Employer approved. Fallback: Leaniar approved. Safety net: portability via receipts.</div>
   </div>
 
 </div>
@@ -214,74 +249,74 @@
 <!-- CALENDAR PANEL -->
 <div id="calendar" class="panel">
 
-  <!-- APRIL -->
   <div class="month-title">April 2026</div>
   <div class="cal-grid">
     <div class="cal-hdr">Su</div><div class="cal-hdr">Mo</div><div class="cal-hdr">Tu</div><div class="cal-hdr">We</div><div class="cal-hdr">Th</div><div class="cal-hdr">Fr</div><div class="cal-hdr">Sa</div>
     <div class="cal-day past"><div class="dn">19</div></div>
     <div class="cal-day past"><div class="dn">20</div></div>
-    <div class="cal-day today"><div class="dn">21</div><span class="ev evg">Prepare docs</span></div>
-    <div class="cal-day"><div class="dn">22</div><span class="ev evg">I-129 pkg ready</span></div>
-    <div class="cal-day"><div class="dn">23</div><span class="ev ev1">📌 LEANIAR LCA</span></div>
-    <div class="cal-day"><div class="dn">24</div><span class="ev evx">LCA pending</span></div>
+    <div class="cal-day past">
+      <div class="dn">21</div>
+      <span class="ev ev1">✅ LEANIAR LCA FILED</span>
+    </div>
+    <div class="cal-day today"><div class="dn">22</div><span class="ev evg">Prepare I-129 docs</span></div>
+    <div class="cal-day"><div class="dn">23</div><span class="ev evx">Lean LCA pending</span></div>
+    <div class="cal-day"><div class="dn">24</div><span class="ev evx">Lean LCA pending</span></div>
     <div class="cal-day"><div class="dn">25</div></div>
     <div class="cal-day"><div class="dn">26</div></div>
-    <div class="cal-day"><div class="dn">27</div><span class="ev ev2">2ND: File LCA</span></div>
-    <div class="cal-day"><div class="dn">28</div><span class="ev ev2">Confirm filed</span></div>
-    <div class="cal-day"><div class="dn">29</div><span class="ev evx">LCAs pending</span></div>
-    <div class="cal-day"><div class="dn">30</div><span class="ev evx">LCAs pending</span></div>
+    <div class="cal-day"><div class="dn">27</div><span class="ev evx">Lean LCA pending</span></div>
+    <div class="cal-day"><div class="dn">28</div><span class="ev evg">2nd: docs + I-907 ready?</span></div>
+    <div class="cal-day"><div class="dn">29</div><span class="ev ev2">📌 2ND: FILE LCA</span></div>
+    <div class="cal-day"><div class="dn">30</div><span class="ev ev1">Lean: LCA cert? →File!</span><span class="ev ev2">2nd LCA pending</span></div>
     <div class="cal-day empty"></div><div class="cal-day empty"></div>
   </div>
 
-  <!-- MAY -->
   <div class="month-title">May 2026</div>
   <div class="cal-grid">
     <div class="cal-hdr">Su</div><div class="cal-hdr">Mo</div><div class="cal-hdr">Tu</div><div class="cal-hdr">We</div><div class="cal-hdr">Th</div><div class="cal-hdr">Fr</div><div class="cal-hdr">Sa</div>
     <div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div>
-    <div class="cal-day"><div class="dn">1</div><span class="ev ev2">2nd LCA pending</span></div>
+    <div class="cal-day"><div class="dn">1</div><span class="ev ev1">Lean: cert? →File!</span></div>
     <div class="cal-day"><div class="dn">2</div></div>
     <div class="cal-day"><div class="dn">3</div></div>
-    <div class="cal-day"><div class="dn">4</div><span class="ev ev1">LCA cert? CHECK</span></div>
-    <div class="cal-day"><div class="dn">5</div><span class="ev ev1">🎯 File I-129+Prem</span></div>
-    <div class="cal-day"><div class="dn">6</div><span class="ev ev1">Confirm sent</span></div>
-    <div class="cal-day"><div class="dn">7</div><span class="ev evx">USCIS receives</span></div>
+    <div class="cal-day"><div class="dn">4</div><span class="ev ev1">🎯 Lean: I-129+Prem</span></div>
+    <div class="cal-day"><div class="dn">5</div><span class="ev ev1">Lean: confirm sent</span></div>
+    <div class="cal-day"><div class="dn">6</div><span class="ev evx">USCIS receives</span></div>
+    <div class="cal-day"><div class="dn">7</div></div>
     <div class="cal-day"><div class="dn">8</div><span class="ev ev2">2nd: LCA cert?</span></div>
     <div class="cal-day"><div class="dn">9</div></div>
     <div class="cal-day"><div class="dn">10</div></div>
-    <div class="cal-day"><div class="dn">11</div><span class="ev ev2">2nd: File I-129</span></div>
-    <div class="cal-day"><div class="dn">12</div><span class="ev ev2">Confirm sent</span></div>
-    <div class="cal-day"><div class="dn">13</div></div>
+    <div class="cal-day"><div class="dn">11</div><span class="ev ev2">🎯 2ND: I-129+PREM</span></div>
+    <div class="cal-day"><div class="dn">12</div><span class="ev ev2">2nd: confirm sent</span></div>
+    <div class="cal-day"><div class="dn">13</div><span class="ev ev2">2nd: USCIS receives</span></div>
     <div class="cal-day"><div class="dn">14</div></div>
-    <div class="cal-day"><div class="dn">15</div><span class="ev ev3">3RD: File LCA</span><span class="ev ev1">Lean receipt?</span></div>
+    <div class="cal-day"><div class="dn">15</div><span class="ev ev3">3RD: File LCA</span><span class="ev ev1">Lean: receipt?</span></div>
     <div class="cal-day"><div class="dn">16</div></div>
     <div class="cal-day"><div class="dn">17</div></div>
     <div class="cal-day"><div class="dn">18</div><span class="ev ev2">2nd: receipt?</span></div>
     <div class="cal-day"><div class="dn">19</div><span class="ev evo">3rd LCA filed?</span></div>
-    <div class="cal-day"><div class="dn">20</div><span class="ev evg">2nd receipt ✅</span></div>
-    <div class="cal-day"><div class="dn">21</div></div>
-    <div class="cal-day"><div class="dn">22</div><span class="ev evx">Premium pending</span></div>
+    <div class="cal-day"><div class="dn">20</div><span class="ev evg">Both receipts ✅</span></div>
+    <div class="cal-day"><div class="dn">21</div><span class="ev ev1">⚡ LEAN DECISION?</span></div>
+    <div class="cal-day"><div class="dn">22</div><span class="ev ev1">Lean: check result</span></div>
     <div class="cal-day"><div class="dn">23</div></div>
     <div class="cal-day"><div class="dn">24</div></div>
     <div class="cal-day"><div class="dn">25</div><span class="ev evx">Memorial Day</span></div>
-    <div class="cal-day"><div class="dn">26</div><span class="ev ev1">⚡ DECISION?</span></div>
-    <div class="cal-day"><div class="dn">27</div><span class="ev ev1">Check result</span></div>
+    <div class="cal-day"><div class="dn">26</div><span class="ev evo">⚡ LEAN DEC DUE</span></div>
+    <div class="cal-day"><div class="dn">27</div></div>
     <div class="cal-day"><div class="dn">28</div><span class="ev ev3">3rd LCA cert?</span></div>
-    <div class="cal-day"><div class="dn">29</div><span class="ev evo">⚡ DECISION PT</span><span class="ev ev2">Upgrade?</span></div>
+    <div class="cal-day"><div class="dn">29</div><span class="ev ev3">3rd LCA cert ✅</span></div>
     <div class="cal-day"><div class="dn">30</div></div>
-    <div class="cal-day"><div class="dn">31</div><span class="ev ev3">🛡️ 3RD: I-129</span></div>
+    <div class="cal-day"><div class="dn">31</div><span class="ev ev3">🛡️ 3RD: File I-129</span></div>
     <div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div><div class="cal-day empty"></div>
   </div>
 
-  <!-- JUNE -->
   <div class="month-title">June 2026</div>
   <div class="cal-grid">
     <div class="cal-hdr">Su</div><div class="cal-hdr">Mo</div><div class="cal-hdr">Tu</div><div class="cal-hdr">We</div><div class="cal-hdr">Th</div><div class="cal-hdr">Fr</div><div class="cal-hdr">Sa</div>
     <div class="cal-day empty"></div>
-    <div class="cal-day"><div class="dn">1</div><span class="ev ev3">3rd: File I-129</span></div>
-    <div class="cal-day"><div class="dn">2</div><span class="ev ev3">Confirm delivery</span></div>
-    <div class="cal-day"><div class="dn">3</div><span class="ev evg">Verify receipts</span></div>
+    <div class="cal-day"><div class="dn">1</div><span class="ev ev2">⚡ 2ND: DECISION?</span><span class="ev ev3">3rd: File I-129</span></div>
+    <div class="cal-day"><div class="dn">2</div><span class="ev ev2">2nd: check result</span></div>
+    <div class="cal-day"><div class="dn">3</div><span class="ev ev2">2nd: decision due</span></div>
     <div class="cal-day"><div class="dn">4</div><span class="ev evo">5 days left</span></div>
-    <div class="cal-day"><div class="dn">5</div><span class="ev evo">4 days left</span></div>
+    <div class="cal-day"><div class="dn">5</div><span class="ev ev2">2ND DEC LATEST</span></div>
     <div class="cal-day"><div class="dn">6</div><span class="ev ev3">LAST file date</span></div>
     <div class="cal-day"><div class="dn">7</div><span class="ev evr">2 days left</span></div>
     <div class="cal-day"><div class="dn">8</div><span class="ev evr">LAST WORK DAY</span></div>
@@ -291,9 +326,9 @@
     <div class="cal-day"><div class="dn">12</div></div>
     <div class="cal-day"><div class="dn">13</div></div>
     <div class="cal-day"><div class="dn">14</div></div>
-    <div class="cal-day"><div class="dn">15</div><span class="ev ev2">2nd: Prem dec?</span></div>
+    <div class="cal-day"><div class="dn">15</div></div>
     <div class="cal-day"><div class="dn">16</div></div>
-    <div class="cal-day"><div class="dn">17</div><span class="ev ev2">2nd: Prem due</span></div>
+    <div class="cal-day"><div class="dn">17</div></div>
     <div class="cal-day"><div class="dn">18</div></div>
     <div class="cal-day"><div class="dn">19</div></div>
     <div class="cal-day"><div class="dn">20</div></div>
@@ -310,18 +345,60 @@
   </div>
 </div>
 
+<!-- RISKS PANEL -->
+<div id="risks" class="panel">
+  <div class="risk-box">
+    <h3>🟡 Overall Risk: MODERATE — Tight but Manageable</h3>
+    <div class="risk-item"><strong>2nd Employer (PRIMARY) is tight.</strong> Normal case gives decision ~June 1-5, only 4-8 days buffer. If LCA takes 15 days (certified May 20), premium decision lands ~June 10 — one day AFTER expiry. This is the main risk.</div>
+    <div class="risk-item"><strong>Leaniar (BACKUP) is strong.</strong> LCA filed Apr 21, decision ~May 21-26. Even worst-case 15-day LCA → decision ~Jun 2. 7 days buffer. Leaniar approval = insurance policy.</div>
+    <div class="risk-item"><strong>3rd Employer safety net unchanged.</strong> I-129 May 31-Jun 6 guarantees receipt before June 9 for portability.</div>
+  </div>
+
+  <div class="risk-box">
+    <h3>📊 2nd Employer Scenarios (YOUR employer)</h3>
+    <div class="risk-item">✅ <strong>Best case:</strong> LCA cert May 8 → I-129+Prem May 8 → Decision June 1. 8 days buffer.</div>
+    <div class="risk-item">🟡 <strong>Normal case:</strong> LCA cert May 13 → I-129+Prem May 13 → Decision June 3. 6 days buffer.</div>
+    <div class="risk-item">🟠 <strong>Slow LCA (15 days):</strong> Cert May 20 → I-129 May 20 → Decision ~June 10. 1 DAY OVER! ⚠️</div>
+    <div class="risk-item">🔴 <strong>Worst case (slow LCA + RFE):</strong> No 2nd Emp approval before Jun 9. Use Leaniar approval or portability receipts.</div>
+  </div>
+
+  <div class="risk-box">
+    <h3>📊 Leaniar Scenarios (BACKUP)</h3>
+    <div class="risk-item">✅ <strong>Best case:</strong> LCA cert Apr 30 → I-129+Prem Apr 30 → Approved May 21. Done 19 days early!</div>
+    <div class="risk-item">🟡 <strong>Normal case:</strong> LCA cert May 5 → I-129+Prem May 5 → Decision May 26. 14 days buffer.</div>
+    <div class="risk-item">🟠 <strong>Slow LCA (15 days):</strong> Cert May 12 → I-129 May 12 → Decision ~Jun 2. 7 days buffer. Still fine.</div>
+  </div>
+
+  <div class="risk-box">
+    <h3>⚠️ Key Risk: 2nd Employer LCA Speed</h3>
+    <div class="risk-item">The #1 risk is 2nd Employer's LCA taking 15+ days. If it certifies after May 17, premium decision may slip past June 9. <strong>Mitigation:</strong> Monitor LCA daily from May 8. If not certified by May 15, start contingency planning.</div>
+    <div class="risk-item"><strong>Action if 2nd Employer LCA slow:</strong> Even without 2nd Employer approval, Leaniar approval (by ~May 26) gives you valid H-1B status. You can work for 2nd Employer under portability with the receipt, while Leaniar approval keeps your status active.</div>
+  </div>
+
+  <div class="risk-box">
+    <h3>🛡️ Safety Layers (3 deep)</h3>
+    <div class="risk-item"><strong>Layer 1:</strong> Leaniar premium approval ~May 21-26. Earliest possible H-1B approval.</div>
+    <div class="risk-item"><strong>Layer 2:</strong> 2nd Employer premium approval ~June 1-5. Your real employer approval.</div>
+    <div class="risk-item"><strong>Layer 3:</strong> 3rd Employer receipt before Jun 9. Portability guaranteed.</div>
+    <div class="risk-item">With 3 layers, the probability of having NO status before June 9 is essentially zero.</div>
+  </div>
+</div>
+
 <!-- ALERTS PANEL -->
 <div id="alerts" class="panel">
-  <div class="alert-item"><strong>Apr 23 — Leaniar LCA not filed?</strong> Confirmed date. If it doesn't happen, push attorney immediately.</div>
-  <div class="alert-item"><strong>May 1 — 2nd Employer LCA not filed?</strong> Must be filed by May 2 absolute latest.</div>
-  <div class="alert-item warn"><strong>May 12 — Leaniar LCA still not certified?</strong> Taking 12+ biz days. Premium decision pushes to Jun 4+. Only 5 days margin.</div>
-  <div class="alert-item"><strong>May 15 — Leaniar I-129 not filed?</strong> CRITICAL. Decision may land after Jun 9. Ensure 2nd employer I-129 is filed.</div>
+  <div class="alert-item ok"><strong>Apr 21 — Leaniar LCA filed ✅</strong> Completed! Backup employer LCA is in progress.</div>
+  <div class="alert-item warn"><strong>Apr 29 — 2nd Employer (PRIMARY) LCA must be filed.</strong> This is YOUR employer. Confirm with attorney on the day. Have I-129 + I-907 package prepped.</div>
+  <div class="alert-item"><strong>Apr 30 — Start checking Leaniar LCA status daily.</strong> Check FLAG system. File I-129 + Premium SAME DAY it certifies.</div>
+  <div class="alert-item"><strong>May 8 — Start checking 2nd Employer LCA status daily.</strong> File I-129 + Premium SAME DAY it certifies. This is critical — every day counts.</div>
+  <div class="alert-item warn"><strong>May 12 — Leaniar LCA still not certified?</strong> Taking 15+ days. Decision pushes to ~Jun 2. Still OK for backup.</div>
+  <div class="alert-item"><strong>May 15 — 2nd Employer LCA still pending?</strong> Getting close to 15-day territory. If not cert by May 17, premium decision may slip past June 9. Monitor closely.</div>
   <div class="alert-item warn"><strong>May 19 — 3rd Employer LCA not filed?</strong> Safety net at risk. Must certify before May 31.</div>
-  <div class="alert-item"><strong>May 29 — Leaniar = RFE/Denied?</strong> CONVERT 2nd Employer to premium SAME DAY. File I-907.</div>
-  <div class="alert-item"><strong>Jun 4 — 3rd Employer I-129 not filed?</strong> File OVERNIGHT or e-file. Receipt must arrive before Jun 9.</div>
-  <div class="alert-item"><strong>Jun 7 — NO receipt from ANY employer?</strong> EMERGENCY. Contact all attorneys. E-file or walk-in.</div>
+  <div class="alert-item"><strong>~May 21-26 — Leaniar premium decision (BACKUP).</strong> If approved → backup H-1B secured! If RFE → 2nd Employer premium still pending + 3rd Employer safety net.</div>
+  <div class="alert-item"><strong>~June 1-5 — 2nd Employer premium decision (PRIMARY).</strong> If approved → Done! Work for 2nd Employer. If RFE → use Leaniar approval or portability receipts.</div>
+  <div class="alert-item"><strong>Jun 4 — 3rd Employer I-129 not filed?</strong> File OVERNIGHT. Receipt must arrive before Jun 9.</div>
+  <div class="alert-item"><strong>Jun 7 — NO receipt from ANY employer?</strong> EMERGENCY. Contact all attorneys immediately.</div>
 
-  <div class="note">⚖️ Organizational guidance only — not legal advice. Confirm all timelines with your immigration attorney. Last updated: Apr 21, 2026.</div>
+  <div class="note">⚖️ Organizational guidance only — not legal advice. Confirm all timelines with your immigration attorney. Updated: Apr 22, 2026.</div>
 </div>
 
 <script>
